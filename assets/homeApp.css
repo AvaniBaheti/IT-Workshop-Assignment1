@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto');
+*{
+ margin:0;
+ padding: 0;
+ outline: 0;
+ font-family: 'Open Sans',Sans-serif;
+}
+/* .filter{
+ position: absolute;
+ left: 0;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ z-index: 1;
+ background: rgb(233,76,161);
+background: -moz-linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+background: linear-gradient(90deg, rgba(233,76,161,1) 0%, rgba(199,74,233,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e94ca1",endColorstr="#c74ae9",GradientType=1);
+opacity: .7;
+} */
+
+nav{
+    display: flex;
+    padding: 8px 3%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+
+}
+.nav-list{
+    flex: 1;
+    text-align: right;
+}
+.nav-list ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-list ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.logo{
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+.nav-list ul li::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: red;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-list ul li:hover::after{
+    width: 100%;
+}
+.container{
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+.container h1{
+    padding: 10px 20px;
+    margin: 10px 133px;
+}
+
+table{
+margin-left: auto;
+margin-right: auto;
+/* margin-top: 200px; */
+ width: 80%; 
+ border-collapse: collapse;
+ border-spacing: 0;
+ box-shadow: 0 2px 15px rgba(64,64,64,.7);
+ border-radius: 12px 12px 0 0;
+ overflow: hidden;
+
+}
+th,td{
+    padding: 15px 20px;
+    text-align: center;
+
+}
+th{
+ background-color: #000000;
+ color: #fafafa;
+ font-family: 'Open Sans',Sans-serif;
+ font-weight: 200;
+ text-transform: uppercase;
+
+}
+tr{
+ width: 100%;
+ background-color: #fafafa;
+ font-family: 'Montserrat', sans-serif;
+}
+tr:nth-child(even){
+ background-color: #eeeeee;
+}
+.container img{
+    width: 125px;
+}
+.container .fridge{
+    width: 70px;
+}
+.container .wasmac{
+    width: 70px;
+}
+.specs{
+    text-align: unset;
+}
+
+button{
+    text-decoration: none;
+    padding: 5px 10px;
+    position: relative;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.lappy-cont{
+    margin:65px 0px;
+}
+.lappy-cont h1{
+    padding: 10px 20px;
+    margin: 10px 133px;
+}
+
+.lappy-cont img{
+    width: 200px;
+}
