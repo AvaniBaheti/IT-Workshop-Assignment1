@@ -70,7 +70,7 @@
     box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
     color: black ;
     position: absolute;
-    transform: translate(-50%,-40%);
+    transform: translate(-50%,-35%);
 }
 form{
     margin: 35px;
