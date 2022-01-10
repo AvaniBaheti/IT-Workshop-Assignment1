@@ -64,6 +64,7 @@
     align-items:center;
     flex-wrap: wrap;
     width:100%;
+    
 }
 .testimonials-box
 {width:500px;
@@ -94,7 +95,7 @@
 
 }
 .reviews{
-    color:yellow;
+    color:rgb(250, 120, 142);
 
 }
 
@@ -107,12 +108,19 @@
 .client_comments p{
     font-size:0.9rem;
     color: #4b4b4b;
+    
 
 }
 hr{
     width:900px;
     margin-left:300px;
-    size: 20px;
-    height:1px;
-    background-color: green;
+    size: 10px;
+    height:0.2px;
+    background-color: yellowgreen;
+}
+.like{
+    color:red;
+}
+.like:hover{
+    color:green;
 }
