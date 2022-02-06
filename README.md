@@ -1,7 +1,7 @@
 
 # ElectroCart
 
-A simple electronics e-commerce website made using HTML,CSS.
+A simple electronics e-commerce website made using HTML,CSS, JS & PHP.
 
 
 ## Demo:

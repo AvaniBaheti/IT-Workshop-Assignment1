@@ -83,7 +83,7 @@
             float: left;
             font-size: 35px;
             border-bottom: 6px solid #230404;
-            margin-bottom: 50px;
+            /* margin-bottom: 50px; */
             padding: 13px 0;
             /* color: white; */
         }
@@ -107,7 +107,7 @@
             background: none;
             font-size: 18px;
             width: 80%;
-            float: left;
+            /* float: left; */
             margin: 0 10px;
             /* color: white; */
         }
@@ -142,22 +142,104 @@
         .register a:hover{
             text-decoration: none;
         }
-        
+        .error{
+            font-size:12px;
+            /* text-align:center; */
+            /* margin-left:100px; */
+            color:red;
+        }
+        .reqF{
+            font-size:12px;
+            color:red;
+        }
     </style>
 </head>
 <body>
+<?php
+// define variables and set to empty values
+$nameErr = $passErr = "*";
+$name = $password =  "";
+
+
+
+
+// ---------------------NAME CHECK--------------
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["username"])) {
+    $nameErr = "Username is required";
+  } else {
+    $name = test_input($_POST["username"]);
+    if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+      $nameErr = "Only letters allowed";
+    }
+    else{
+        $nameErr = "";
+    }
+}
+// ----------------------------
+
+
+
+
+// ---------------------PASSWORD--------------------
+if(empty($_POST["password"])){
+    $passErr = "Password is required";
+}
+else{
+    $password=test_input($_POST["password"]);
+    $number = preg_match('@[0-9]@', $password);
+    $uppercase = preg_match('@[A-Z]@', $password);
+    $lowercase = preg_match('@[a-z]@', $password);
+    $specialChars = preg_match('@[^\w]@', $password);
+    if(strlen($password) < 8 || !$number || !$uppercase || !$lowercase || !$specialChars) {
+        $passErr = "Enter a strong Password";
+    }    
+    else{
+        $passErr = "";
+    }
+} 
+// -----------------------------------------------------
+
+
+}
+
+
+if($nameErr =='' && $passErr =='')
+{
+//  To redirect form on a particular page
+echo '<script type="text/javascript">'; 
+echo 'alert("Welcome '.$name.' \nPress OK to redirect to home page");';
+echo 'window.location.href="../index.php";';
+echo '</script>';
+}
+// else{
+//     echo $nameErr;
+//     echo $passErr;
+// }
+
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+
+
+
+?>
         <section class="page">
             <div class="nav">
                 <nav>
-                  <a class="logo" href="../index.html"><h1>ElectroCart</h1></a>
+                  <a class="logo" href="../index.php"><h1>ElectroCart</h1></a>
                   <div class="nav-list">
                     <ul>
-                      <li><a href="../index.html">Home</a></li>
-                      <li><a href="login.html">Login</a></li>
-                      <li><a href="registerform.html">Cart</a></li>
+                      <li><a href="../index.php">Home</a></li>
+                      <li><a href="login.php">Login</a></li>
+                      <li><a href="registerform.php">Cart</a></li>
                       <li><a href="trending.html">Trending</a></li>
                       <li><a href="reviewelectroCart.html">Reviews</a></li>
-                      <li><a href="contactelectrocart.html">Contact Us</a></li>
+                      <li><a href="contactelectrocart.php">Contact Us</a></li>
                       <li><a href="aboutus.html">About Us</a></li>
                     </ul>
                   </div>
@@ -165,22 +247,28 @@
               </div>
         <div class="box">
             <h1>Login</h1>
-            <form action="">
-                <div class="textbox">
+            <br><br><br><br><br>
+            <p class="reqF">* required field</p>
+            <form method = "post">
+                <div class="textbox" method="get">
                     <img src="https://img.icons8.com/ios-glyphs/30/000000/user--v1.png"/ >
                     <input type="text" name="username" id="" placeholder="Username">
+                    <p class="error"><?php echo $nameErr;?></p>
+                    
                 </div>
                 <div class="textbox">
                     <img src="https://img.icons8.com/ios-glyphs/30/000000/lock--v1.png"/>
                     <input type="password" name="password" id="" placeholder="Password">
+                    <p class="error"><?php echo $passErr;?></p>
                 </div>
-                <input class="btn" type="button" value="Login" ac>
+                <input class="btn" type="Submit" value="Login" name="Submit">
                 <div class="register">
             </form>
             
-                <p>Don't have an account <a href="signup.html">Register</a></p>
+                <p>Don't have an account <a href="signup.php">Register</a></p>
             </div>
         </div>
     </section>
+
 </body>
 </html>

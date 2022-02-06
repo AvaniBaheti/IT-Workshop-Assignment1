@@ -49,6 +49,9 @@
         width: 100%;
         }
         /* NavBar End */
+.head{
+    margin-bottom:11px;
+}
 .head h1{
     text-align: center;
     padding: 13px;
@@ -70,11 +73,14 @@
     box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
     color: black ;
     position: absolute;
-    transform: translate(-50%,-35%);
+    transform: translate(-50%,-40%);
+    margin-top:70px;
+    margin-bottom:45px;
 }
 form{
     margin: 35px;
-    margin-top:10px;
+    margin-top:-60px;
+    margin-bottom:30px;
 }
 .input-field
 {
@@ -117,12 +123,25 @@ form{
     padding-bottom: 5px;
     margin-top:20px;
 
-    background-color: rgb(253, 98, 98);
+    background-color: rgb(253, 115, 115);
     font-size:20px;
     margin-left:132px;
 }
 .submit:hover{
     cursor: pointer;
 
-    background-color: rgb(250, 59, 59);
+    background-color: rgb(255, 56, 56);
+}
+
+/* #req{
+    padding-top: 8px;
+}
+
+span{
+    margin-left: 400px;
+} */
+
+.error{
+    margin-left: 400px;
+    color: white;
 }

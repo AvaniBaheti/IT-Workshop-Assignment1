@@ -15,15 +15,16 @@
     <section class="home">
       <div class="nav">
         <nav>
-          <a class="logo" href="index.html"><h1>ElectroCart</h1></a>
+          <a class="logo" href="index.php"><h1>ElectroCart</h1></a>
           <div class="nav-list">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="assets/login.html">Login</a></li>
-              <li><a href="assets/registerform.html">Cart</a></li>
+              
+              <li><a href="index.php">Home</a></li>
+              <li><a href="assets/login.php">Login</a></li>
+              <li><a href="assets/registerform.php">Cart</a></li>
               <li><a href="assets/trending.html">Trending</a></li>
               <li><a href="assets/reviewelectroCart.html">Reviews</a></li>
-              <li><a href="assets/contactelectrocart.html">Contact Us</a></li>
+              <li><a href="assets/contactelectrocart.php">Contact Us</a></li>
               <li><a href="assets/aboutus.html">About Us</a></li>
             </ul>
           </div>

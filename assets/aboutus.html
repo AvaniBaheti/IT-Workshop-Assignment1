@@ -6,19 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ElectroCart | About Us</title>
     <link rel="stylesheet" href="aboutus.css">
+    <script type = "text/javascript">
+        function setnewimage2()
+        {
+            document.getElementById("img1").src="images/electro12.JPG";
+        }
+        function setoldimage2()
+        {
+            document.getElementById("img1").src="images/e11.JPG";
+        }
+        function setnewimage3()
+        {
+            document.getElementById("img2").src="images/electro11.JPG";
+        }
+        function setoldimage3()
+        {
+            document.getElementById("img2").src="images/e10.JPG";
+        }
+    </script>
+
+    
 </head>
 <body>
     <div class="nav">
         <nav>
-          <a class="logo" href="../index.html"><h1>ElectroCart</h1></a>
+          <a class="logo" href="../index.php"><h1>ElectroCart</h1></a>
           <div class="nav-list">
             <ul>
-              <li><a href="../index.html">Home</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="registerform.html">Cart</a></li>
+              <li><a href="../index.php">Home</a></li>
+              <li><a href="login.php">Login</a></li>
+              <li><a href="registerform.php">Cart</a></li>
               <li><a href="trending.html">Trending</a></li>
               <li><a href="reviewelectroCart.html">Reviews</a></li>
-              <li><a href="contactelectrocart.html">Contact Us</a></li>
+              <li><a href="contactelectrocart.php">Contact Us</a></li>
               <li><a href="aboutus.html">About Us</a></li>
             </ul>
           </div>
@@ -29,7 +49,7 @@
         <div class= "image">
 
 
-            <img src="images/e11.JPG">
+            <img id = "img1" onmouseover = "setnewimage2()" onmouseout="setoldimage2()" src="images/e11.JPG">
             </div>
             <div class = "write">
             <p>Electro cart is a big online platform for the electronic items . we are guided by three principles:
@@ -84,7 +104,7 @@
         <div class= "image2">
 
 
-            <img src="images/e10.JPG">
+            <img id = "img2" onmouseover = "setnewimage3()" onmouseout="setoldimage3()" src="images/e10.JPG">
             </div>
     </div>
     <br>
